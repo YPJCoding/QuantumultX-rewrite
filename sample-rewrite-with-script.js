@@ -19,6 +19,7 @@
 
 const body = JSON.parse($response.body);
 
+$notify('title', 'subtitle', 'message')
 obj.data = [];
 
 $done(JSON.stringify(body));
