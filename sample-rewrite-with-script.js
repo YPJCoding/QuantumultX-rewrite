@@ -1,9 +1,3 @@
-/**
- * @fileoverview Example of HTTP rewrite.
- *
- * @supported Quantumult X (v1.0.5-build173)
- */
-
 // $request, $response, $notify(title, subtitle, message), console.log(message)
 // $request.scheme, $request.method, $request.url, $request.path, $request.headers
 // $response.statusCode, $response.headers, $response.body
@@ -17,8 +11,8 @@
 // You can optional change the response headers at the same time by using $done({body: modifiedBody, headers: modifiedHeaders}); only change the response headers is not allowed for script-response-body. The modifiedHeaders can be copied and modified from $response.headers, please do not change the content length, type and encoding field.
 // Response status can also be optional changed by using $done({body: modifiedBody, headers: modifiedHeaders, status: modifiedStatus}), the modifiedStatus should be like "HTTP/1.1 200 OK"
 
-const body = JSON.parse($response.body);
+const body = JSON.parse($response.body)
 
-body.data = [];
-
-$done(JSON.stringify(body));
+console.log('[ body ] >', body.data)
+console.log('[ $request ] >', $request)
+$done(JSON.stringify(body))
