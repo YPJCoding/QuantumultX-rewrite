@@ -13,6 +13,6 @@
 
 const body = JSON.parse($response.body)
 
-console.log('[ $response.body ] >', $response.body)
+console.log($response.body)
 
 $done(JSON.stringify(body))
